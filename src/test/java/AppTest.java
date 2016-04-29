@@ -21,11 +21,22 @@ public class AppTest extends FluentTest {
   @ClassRule
   public static ServerRule server = new ServerRule();
 
+  @Test
+  public void rootTest() {
+    goTo("http://localhost:4567/");
+    assertThat(pageSource()).contains("Dictionary!");
+    assertThat(pageSource()).contains("Add a New Word");
+    assertThat(pageSource()).contains("View Words List");
+  }
+// <-- test for othet page-->
   // @Test
-  // public void rootTest() {
+  // public void wordIsCreated() {
   //   goTo("http://localhost:4567/");
-  //   assertThat(pageSource()).contains("Word list!");
+  //   fill("#description").with("Earth");
+  //   submit(".btn");
+  //   assertThat(pageSource()).contains("Your word has been saved.");
   // }
+
 
 
 }

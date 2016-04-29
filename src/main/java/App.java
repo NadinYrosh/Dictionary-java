@@ -16,6 +16,18 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
+    post("/words", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      String description = request.queryParams("description");
+      Word newWord = new Word(description);
+      request.session().attribute("word", newWord);
+
+      model.put("template","templates/success.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+  }
+}
+
   //   get("tasks/new", (request, response) -> {
   //     HashMap<String, Object> model = new HashMap<String, Object>();
   //     model.put("template", "templates/task-form.vtl");
@@ -45,5 +57,3 @@ public class App {
   //     model.put("template", "templates/task.vtl");
   //     return new ModelAndView(model, layout);
   //   }, new VelocityTemplateEngine());
-  }
-}
