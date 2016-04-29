@@ -84,11 +84,11 @@ public class WordTest {
     assertEquals(0, testWord.getDefinition().size());
   }
 
-  // @Test
-  // public void addDefinition_addsDefinitionToListOfWords_true() {
-  //   Word testWord = new Word("Earth");
-  //   Definition testDefinition = new Definition("Home is");
-  //   testWord.addDefinition(testDefinition);
-  //   assertTrue(testWord.getDefinition().contains(testDefinition));
-  // }
+  @Test
+  public void addDefinition_addsDefinitionToListOfWords_true() {
+    Word testWord = new Word("Earth");
+    Definition testDefinition = new Definition("Home is");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinition().contains(testDefinition));
+  }
 }

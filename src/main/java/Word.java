@@ -50,11 +50,7 @@ public class Word {
     return mDescriptions;
   }
 
-  // public ArrayList<Definition> getDefinition() {
-  //   return mDescriptions;
-  // }
-  //
-  // public void addDefinition(Definition description) {
-  //   mDescription.add(description);
-  // }
+  public void addDefinition(Definition description) {
+    mDescriptions.add(description);
+  }
 }

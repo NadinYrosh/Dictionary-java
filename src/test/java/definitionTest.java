@@ -7,7 +7,7 @@ public class DefinitionTest {
   @After
   public void tearDown() {
     Definition.clear();
-    // Word.clear();
+    Word.clear();
   }
   @Test
   public void definition_instantiatesCorrectly_true() {
