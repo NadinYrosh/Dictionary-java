@@ -3,8 +3,7 @@ public class Word {
   private String mDescription;
   private boolean mCompleted;
   private static ArrayList<Word> mInstances = new ArrayList<Word>();
-
-
+  private int mId;
 
 
 
@@ -13,6 +12,8 @@ public class Word {
     mDescription = description;
     mCompleted = false;
     mInstances.add(this);
+    mId = mInstances.size();
+
 
   }
 
@@ -26,5 +27,9 @@ public class Word {
 
   public static ArrayList<Word> all() {
     return mInstances;
+  }
+
+  public int getId() {
+    return mId;
   }
 }

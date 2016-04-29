@@ -28,13 +28,13 @@ public class WordTest {
     assertTrue(Word.all().contains(myWord1));
     assertTrue(Word.all().contains(myWord2));
   }
-  //
-  // @Test
-  // public void newId_tasksInstantiateWithAnID_true() {
-  //   Task myTask = new Task("Mow the lawn");
-  //   assertEquals(Task.all().size(), myTask.getId());
-  // }
-  //
+
+  @Test
+  public void newId_wordInstantiateWithAnID_true() {
+    Word myWord = new Word("Earth");
+    assertEquals(Word.all().size(), myWord.getId());
+  }
+
   // @Test
   // public void find_returnsTaskWithSameId_secondTask() {
   //   Task firstTask = new Task("Mow the lawn");
