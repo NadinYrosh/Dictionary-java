@@ -12,17 +12,24 @@ public class WordTest {
     Word myWord = new Word("Earth");
     assertEquals(true, myWord instanceof Word);
   }
-  @Test
-  public void word_instantiatesWithDescription_String() {
-    Word myWord = new Word("Earth");
-    assertEquals("Earth", myWord.getDescription());
-  }
 
   @Test
-  public void isCompleted_isFalseAfterInstantiation_false() {
-    Word myWord = new Word("Earth");
-    assertEquals(false, myWord.isCompleted());
+  public void getDescription_categoryInstatiatesWithDescription_Home() {
+    Word testWord = new Word("Home");
+    assertEquals("Home", testWord.getDescription());
   }
+
+  // @Test
+  // public void word_instantiatesWithDescription_String() {
+  //   Word myWord = new Word("Earth");
+  //   assertEquals("Earth", myWord.getDescription());
+  // }
+  //
+  // @Test
+  // public void isCompleted_isFalseAfterInstantiation_false() {
+  //   Word myWord = new Word("Earth");
+  //   assertEquals(false, myWord.isCompleted());
+  // }
 
   @Test
   public void all_returnsAllInstancesOfWord_true() {
@@ -41,18 +48,17 @@ public class WordTest {
 
   @Test
   public void getId_tasksInstantiateWithAnID_1() {
-    Word.clear();
-    Word myWord = new Word("Earth");
-    assertEquals(1, myWord.getId());
+    Word testWord = new Word("Earth");
+    assertEquals(1, testWord.getId());
   }
 
 
-  @Test
-  public void newId_wordInstantiateWithAnID_true() {
-    Word myWord = new Word("Earth");
-    assertEquals(Word.all().size(), myWord.getId());
-  }
-
+  // @Test
+  // public void newId_wordInstantiateWithAnID_true() {
+  //   Word myWord = new Word("Earth");
+  //   assertEquals(Word.all().size(), myWord.getId());
+  // }
+  //
   @Test
   public void find_returnsWordWithSameId_secondTask() {
     Word myWord1 = new Word("Earth");
@@ -72,11 +78,11 @@ public class WordTest {
   //   assertEquals(0, testDefinition.getWord().size());
   // }
 
-  // @Test
-  // public void getDefinition_initiallyReturnsEmptyList_ArrayList() {
-  //   Word testWord = new Word("Earth");
-  //   assertEquals(0, testWord.getDefinition().size());
-  // }
+  @Test
+  public void getDefinition_initiallyReturnsEmptyList_ArrayList() {
+    Word testWord = new Word("Earth");
+    assertEquals(0, testWord.getDefinition().size());
+  }
 
   // @Test
   // public void addDefinition_addsDefinitionToListOfWords_true() {

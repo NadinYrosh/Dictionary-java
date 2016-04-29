@@ -49,6 +49,10 @@ public class Word {
   public ArrayList<Definition> getDefinition() {
     return mDescriptions;
   }
+
+  // public ArrayList<Definition> getDefinition() {
+  //   return mDescriptions;
+  // }
   //
   // public void addDefinition(Definition description) {
   //   mDescription.add(description);
