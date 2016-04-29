@@ -8,17 +8,11 @@ public class WordTest {
     Word myWord = new Word("Earth");
     assertEquals(true, myWord instanceof Word);
   }
-  // @Test
-  // public void task_instantiatesCorrectly_true() {
-  //   Task myTask = new Task("Mow the lawn");
-  //   assertEquals(true, myTask instanceof Task);
-  // }
-  //
-  // @Test
-  // public void task_instantiatesWithDescription_String() {
-  //   Task myTask = new Task("Mow the lawn");
-  //   assertEquals("Mow the lawn", myTask.getDescription());
-  // }
+  @Test
+  public void word_instantiatesWithDescription_String() {
+    Word myWord = new Word("Earth");
+    assertEquals("Earth", myWord.getDescription());
+  }
   //
   // @Test
   // public void isCompleted_isFalseAfterInstantiation_false() {
