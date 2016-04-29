@@ -5,16 +5,11 @@ public class Word {
   private static ArrayList<Word> mInstances = new ArrayList<Word>();
   private int mId;
 
-
-
-
   public Word(String description) {
     mDescription = description;
     mCompleted = false;
     mInstances.add(this);
     mId = mInstances.size();
-
-
   }
 
   public String getDescription() {
@@ -29,6 +24,10 @@ public class Word {
     return mInstances;
   }
 
+  public static void clear() {
+    mInstances.clear();
+  }
+
   public int getId() {
     return mId;
   }
@@ -39,5 +38,5 @@ public class Word {
     } catch(IndexOutOfBoundsException e) {
       return null;
     }
-  } 
+  }
 }

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-04-29T17:25:50" hostname="epicodus-55.local" time="0.001">
+<testsuite name="WordTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-04-29T17:41:44" hostname="epicodus-55.local" time="0.002">
   <properties/>
   <testcase name="find_returnsWordWithSameId_secondTask" classname="WordTest" time="0.001"/>
   <testcase name="word_instantiatesWithDescription_String" classname="WordTest" time="0.0"/>
+  <testcase name="getId_tasksInstantiateWithAnID_1" classname="WordTest" time="0.001"/>
   <testcase name="isCompleted_isFalseAfterInstantiation_false" classname="WordTest" time="0.0"/>
+  <testcase name="find_returnsNullWhenNoWordFound_null" classname="WordTest" time="0.0"/>
   <testcase name="newId_wordInstantiateWithAnID_true" classname="WordTest" time="0.0"/>
   <testcase name="all_returnsAllInstancesOfWord_true" classname="WordTest" time="0.0"/>
+  <testcase name="clear_emptiesAllWordsFromArrayList_0" classname="WordTest" time="0.0"/>
   <testcase name="word_instantiatesCorrectly_true" classname="WordTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

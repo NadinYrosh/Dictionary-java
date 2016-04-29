@@ -2,6 +2,10 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class WordTest {
+  @After
+  public void tearDown() {
+    Word.clear();
+  }
 
   @Test
   public void word_instantiatesCorrectly_true(){
@@ -20,7 +24,6 @@ public class WordTest {
     assertEquals(false, myWord.isCompleted());
   }
 
-
   @Test
   public void all_returnsAllInstancesOfWord_true() {
     Word myWord1 = new Word("Earth");
@@ -28,6 +31,21 @@ public class WordTest {
     assertTrue(Word.all().contains(myWord1));
     assertTrue(Word.all().contains(myWord2));
   }
+
+  @Test
+  public void clear_emptiesAllWordsFromArrayList_0() {
+    Word myWord1 = new Word("Earth");
+    Word.clear();
+    assertEquals(Word.all().size(), 0);
+  }
+
+  @Test
+  public void getId_tasksInstantiateWithAnID_1() {
+    Word.clear();
+    Word myWord = new Word("Earth");
+    assertEquals(1, myWord.getId());
+  }
+
 
   @Test
   public void newId_wordInstantiateWithAnID_true() {
@@ -42,10 +60,10 @@ public class WordTest {
     assertEquals(Word.find(myWord2.getId()), myWord2);
   }
 
-  // @Test
-  // public void find_returnsNullWhenNoTaskFound_null() {
-  //   assertTrue(Task.find(999) == null);
-  // }
+  @Test
+  public void find_returnsNullWhenNoWordFound_null() {
+    assertTrue(Word.find(999) == null);
+  }
   //
   // @Test
   // public void clear_emptiesAllTasksFromArrayList_0() {
