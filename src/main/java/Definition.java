@@ -2,13 +2,22 @@ import java.util.ArrayList;
 
 public class Definition {
   private String mDescription;
+  // private ArrayList<Word> mWord;
+  private static ArrayList<Definition> instances = new ArrayList<Definition>();
 
 
   public Definition(String description){
     mDescription = description;
+    instances.add(this);
+    // mId = instances.size();
+    // mWord = new ArreyList<Word>();
   }
 
   public String getDescription() {
     return mDescription;
+  }
+
+  public static ArrayList<Definition> all(){
+    return instances;
   }
 }
