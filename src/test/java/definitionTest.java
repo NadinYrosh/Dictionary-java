@@ -29,5 +29,12 @@ public class DefinitionTest {
     assertTrue(Definition.all().contains(secondDefinition));
   }
 
+  @Test
+  public void clear_emptiesALlDefinitions_0(){
+    Definition testDefinition = new Definition("Home is");
+    Definition.clear();
+    assertEquals(Definition.all().size(), 0);
+  }
+
 
 }

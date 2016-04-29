@@ -20,4 +20,8 @@ public class Definition {
   public static ArrayList<Definition> all(){
     return instances;
   }
+
+  public static void clear(){
+    instances.clear();
+  }
 }
