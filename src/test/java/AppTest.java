@@ -28,6 +28,24 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Add a New Word");
     assertThat(pageSource()).contains("View Words List");
   }
+
+  @Test
+  public void wordIsCreatedTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add a New Word"));
+    fill("#name").with("House");
+    submit(".btn");
+    assertThat(pageSource()).contains("Your Word has been saved.");
+  }
+
+  @Test
+  public void wordsIsDisplayedTest() {
+    goTo("http://localhost:4567/words/new");
+    fill("#name").with("House");
+    submit(".btn");
+    click("a", withText("View Words list."));
+    assertThat(pageSource()).contains("Household chores");
+  }
 // <-- test for othet page-->
   // @Test
   // public void wordIsCreated() {

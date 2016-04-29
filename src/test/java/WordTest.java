@@ -19,17 +19,6 @@ public class WordTest {
     assertEquals("Home", testWord.getDescription());
   }
 
-  // @Test
-  // public void word_instantiatesWithDescription_String() {
-  //   Word myWord = new Word("Earth");
-  //   assertEquals("Earth", myWord.getDescription());
-  // }
-  //
-  // @Test
-  // public void isCompleted_isFalseAfterInstantiation_false() {
-  //   Word myWord = new Word("Earth");
-  //   assertEquals(false, myWord.isCompleted());
-  // }
 
   @Test
   public void all_returnsAllInstancesOfWord_true() {
@@ -53,12 +42,6 @@ public class WordTest {
   }
 
 
-  // @Test
-  // public void newId_wordInstantiateWithAnID_true() {
-  //   Word myWord = new Word("Earth");
-  //   assertEquals(Word.all().size(), myWord.getId());
-  // }
-  //
   @Test
   public void find_returnsWordWithSameId_secondTask() {
     Word myWord1 = new Word("Earth");
@@ -71,12 +54,6 @@ public class WordTest {
     assertTrue(Word.find(999) == null);
   }
 
-  // @Test
-  // public void clear_emptiesAllDescriptionsFromArrayList_0() {
-  //   Definition testDefinition = new Definition("Home is");
-  //
-  //   assertEquals(0, testDefinition.getWord().size());
-  // }
 
   @Test
   public void getDefinition_initiallyReturnsEmptyList_ArrayList() {
