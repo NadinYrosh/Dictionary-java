@@ -1,9 +1,12 @@
 import java.util.ArrayList;
+
 public class Word {
   private String mDescription;
   private boolean mCompleted;
   private static ArrayList<Word> mInstances = new ArrayList<Word>();
   private int mId;
+
+  
 
   public Word(String description) {
     mDescription = description;
