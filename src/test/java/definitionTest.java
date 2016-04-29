@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class DefinitionTest {
   @After
   public void tearDown() {
-    // Definition.clear();
+    Definition.clear();
     // Word.clear();
   }
   @Test
@@ -34,6 +34,24 @@ public class DefinitionTest {
     Definition testDefinition = new Definition("Home is");
     Definition.clear();
     assertEquals(Definition.all().size(), 0);
+  }
+
+  @Test
+  public void getId_definitionInstantiateWithAnId_1(){
+    Definition testDefinition = new Definition("Home is");
+    assertEquals(1, testDefinition.getId());
+  }
+
+  @Test
+  public void find_returnsDefinitionWithSameId_secondDefinition() {
+    Definition firstDefinition = new Definition("Home is");
+    Definition secondDefinition = new Definition("Work is");
+    assertEquals(Definition.find(secondDefinition.getId()), secondDefinition);
+  }
+
+  @Test
+  public void find_returnsNullWhenNoDefinitionFound_null() {
+    assertTrue(Definition.find(999) == null);
   }
 
 
