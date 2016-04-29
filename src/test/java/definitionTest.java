@@ -10,10 +10,16 @@ public class DefinitionTest {
     // Word.clear();
   }
   @Test
-    public void definition_instantiatesCorrectly_true() {
-      Definition testDefinition = new Definition("Home");
-      assertEquals(true, testDefinition instanceof Definition);
-    }
+  public void definition_instantiatesCorrectly_true() {
+    Definition testDefinition = new Definition("Home is");
+    assertEquals(true, testDefinition instanceof Definition);
+  }
+
+  @Test
+  public void getDescription_categoryInstantiatesWithDescription_Home() {
+    Definition testDefinition = new Definition("Home is");
+    assertEquals("Home is", testDefinition.getDescription());
+  }
 
 
 }
