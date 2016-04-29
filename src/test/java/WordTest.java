@@ -35,13 +35,13 @@ public class WordTest {
     assertEquals(Word.all().size(), myWord.getId());
   }
 
-  // @Test
-  // public void find_returnsTaskWithSameId_secondTask() {
-  //   Task firstTask = new Task("Mow the lawn");
-  //   Task secondTask = new Task("Buy groceries");
-  //   assertEquals(Task.find(secondTask.getId()), secondTask);
-  // }
-  //
+  @Test
+  public void find_returnsWordWithSameId_secondTask() {
+    Word myWord1 = new Word("Earth");
+    Word myWord2 = new Word("Rock");
+    assertEquals(Word.find(myWord2.getId()), myWord2);
+  }
+
   // @Test
   // public void find_returnsNullWhenNoTaskFound_null() {
   //   assertTrue(Task.find(999) == null);
