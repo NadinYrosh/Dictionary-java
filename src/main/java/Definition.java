@@ -2,8 +2,9 @@ import java.util.ArrayList;
 
 public class Definition {
   private String mDescription;
+  private boolean mCompleted;
   private int mId;
-  // private ArrayList<Word> mWord;
+  private ArrayList<Word> mWord;
   private static ArrayList<Definition> instances = new ArrayList<Definition>();
 
 
@@ -11,11 +12,15 @@ public class Definition {
     mDescription = description;
     instances.add(this);
     mId = instances.size();
-    // mWord = new ArreyList<Word>();
+    mWord = new ArrayList<Word>();
   }
 
   public String getDescription() {
     return mDescription;
+  }
+
+  public boolean isCompleted() {
+    return mCompleted;
   }
 
   public static ArrayList<Definition> all() {

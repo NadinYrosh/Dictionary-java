@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-04-29T20:47:56" hostname="epicodus-55.local" time="0.001">
+<testsuite name="WordTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-04-29T22:21:46" hostname="epicodus-55.local" time="0.002">
   <properties/>
-  <testcase name="find_returnsWordWithSameId_secondTask" classname="WordTest" time="0.0"/>
+  <testcase name="find_returnsWordWithSameId_secondTask" classname="WordTest" time="0.001"/>
   <testcase name="word_instantiatesWithDescription_String" classname="WordTest" time="0.0"/>
   <testcase name="getId_tasksInstantiateWithAnID_1" classname="WordTest" time="0.0"/>
   <testcase name="isCompleted_isFalseAfterInstantiation_false" classname="WordTest" time="0.0"/>

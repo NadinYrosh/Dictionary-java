@@ -5,14 +5,17 @@ public class Word {
   private boolean mCompleted;
   private static ArrayList<Word> mInstances = new ArrayList<Word>();
   private int mId;
+  private ArrayList<Word> mWord;
+  private ArrayList<Definition> mDescriptions;
 
-  
 
   public Word(String description) {
     mDescription = description;
     mCompleted = false;
     mInstances.add(this);
     mId = mInstances.size();
+    mWord = new ArrayList<Word>();
+    mDescriptions = new ArrayList<Definition>();
   }
 
   public String getDescription() {
@@ -42,4 +45,12 @@ public class Word {
       return null;
     }
   }
+
+  public ArrayList<Definition> getDefinition() {
+    return mDescriptions;
+  }
+  //
+  // public void addDefinition(Definition description) {
+  //   mDescription.add(description);
+  // }
 }

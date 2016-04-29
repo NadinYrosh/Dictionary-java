@@ -22,6 +22,13 @@ public class DefinitionTest {
   }
 
   @Test
+  public void isCompleted_isFalseAfterInstantiation_false() {
+    Definition testDefinition = new Definition("Home is");
+    assertEquals(false, testDefinition.isCompleted());
+  }
+
+
+  @Test
   public void all_returnsAllInstancesOfDescription_true() {
     Definition firstDefinition = new Definition("Home is");
     Definition secondDefinition = new Definition("Work is");
@@ -53,6 +60,4 @@ public class DefinitionTest {
   public void find_returnsNullWhenNoDefinitionFound_null() {
     assertTrue(Definition.find(999) == null);
   }
-
-
 }

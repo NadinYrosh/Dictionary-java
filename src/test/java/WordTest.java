@@ -64,11 +64,25 @@ public class WordTest {
   public void find_returnsNullWhenNoWordFound_null() {
     assertTrue(Word.find(999) == null);
   }
-  //
+
   // @Test
-  // public void clear_emptiesAllTasksFromArrayList_0() {
-  //   Task myTask = new Task("Mow the lawn");
-  //   Task.clearTasksArray();
-  //   assertEquals(Task.all().size(), 0);
+  // public void clear_emptiesAllDescriptionsFromArrayList_0() {
+  //   Definition testDefinition = new Definition("Home is");
+  //
+  //   assertEquals(0, testDefinition.getWord().size());
+  // }
+
+  // @Test
+  // public void getDefinition_initiallyReturnsEmptyList_ArrayList() {
+  //   Word testWord = new Word("Earth");
+  //   assertEquals(0, testWord.getDefinition().size());
+  // }
+
+  // @Test
+  // public void addDefinition_addsDefinitionToListOfWords_true() {
+  //   Word testWord = new Word("Earth");
+  //   Definition testDefinition = new Definition("Home is");
+  //   testWord.addDefinition(testDefinition);
+  //   assertTrue(testWord.getDefinition().contains(testDefinition));
   // }
 }
