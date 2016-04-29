@@ -13,26 +13,21 @@ public class WordTest {
     Word myWord = new Word("Earth");
     assertEquals("Earth", myWord.getDescription());
   }
-  //
-  // @Test
-  // public void isCompleted_isFalseAfterInstantiation_false() {
-  //   Task myTask = new Task("Mow the lawn");
-  //   assertEquals(false, myTask.isCompleted());
-  // }
-  //
-  // @Test
-  // public void getCreatedAt_instantiatesWithCurrentTime_today() {
-  //   Task myTask = new Task("Mow the lawn");
-  //   assertEquals(LocalDateTime.now().getDayOfWeek(), myTask.getCreatedAt().getDayOfWeek());
-  // }
-  //
-  // @Test
-  // public void all_returnsAllInstancesOfTask_true() {
-  //   Task firstTask = new Task("Mow the lawn");
-  //   Task secondTask = new Task("Buy groceries");
-  //   assertTrue(Task.all().contains(firstTask));
-  //   assertTrue(Task.all().contains(secondTask));
-  // }
+
+  @Test
+  public void isCompleted_isFalseAfterInstantiation_false() {
+    Word myWord = new Word("Earth");
+    assertEquals(false, myWord.isCompleted());
+  }
+
+
+  @Test
+  public void all_returnsAllInstancesOfWord_true() {
+    Word myWord1 = new Word("Earth");
+    Word myWord2 = new Word("Rock");
+    assertTrue(Word.all().contains(myWord1));
+    assertTrue(Word.all().contains(myWord2));
+  }
   //
   // @Test
   // public void newId_tasksInstantiateWithAnID_true() {
