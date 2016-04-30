@@ -44,68 +44,27 @@ public class AppTest extends FluentTest {
     fill("#name").with("House");
     submit(".btn");
     click("a", withText("View Words list."));
-    assertThat(pageSource()).contains("Household chores");
+    assertThat(pageSource()).contains("House");
   }
-// <-- test for othet page-->
-  // @Test
-  // public void wordIsCreated() {
-  //   goTo("http://localhost:4567/");
-  //   fill("#description").with("Earth");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("Your word has been saved.");
-  // }
 
+  @Test
+  public void wordShowPageDisplaysDescription() {
+    goTo("http://localhost:4567/words/new");
+    fill("#name").with("House");
+    submit(".btn");
+    click("a", withText("View Words list."));
+    click("a", withText("House"));
+    assertThat(pageSource()).contains("House");
+  }
 
+  @Test
+  public void wordDefinitionPageDisplaysDescription() {
+    goTo("http://localhost:4567/words/new");
+    fill("#name").with("Cat");
+    submit(".btn");
+    click("a", withText("View Words list."));
+    click("a", withText("Cat"));
+    assertThat(pageSource()).contains("Add a word to Cat");
+  }
 
 }
-//
-//   @Rule
-//   public ClearRule clearRule = new ClearRule();
-//
-//
-//   @Test
-//   public void taskIsCreatedTest() {
-//     goTo("http://localhost:4567/");
-//     click("a", withText("Add a new task"));
-//     fill("#description").with("Mow the lawn");
-//     submit(".btn");
-//     assertThat(pageSource()).contains("Your task has been saved.");
-//   }
-//
-//   @Test
-//   public void taskIsDisplayedTest() {
-//    goTo("http://localhost:4567/tasks/new");
-//    fill("#description").with("Mow the lawn");
-//    submit(".btn");
-//    click("a", withText("View tasks"));
-//    assertThat(pageSource()).contains("Mow the lawn");
-//   }
-//
-//   @Test
-//   public void multipleTasksAreDisplayedTest() {
-//     goTo("http://localhost:4567/tasks/new");
-//     fill("#description").with("Mow the lawn");
-//     submit(".btn");
-//     goTo("http://localhost:4567/tasks/new");
-//     fill("#description").with("Buy groceries");
-//     submit(".btn");
-//     click("a", withText("View tasks"));
-//     assertThat(pageSource()).contains("Mow the lawn");
-//     assertThat(pageSource()).contains("Buy groceries");
-//   }
-//
-//   @Test
-//   public void taskShowPageDisplayDescription() {
-//     goTo("http://localhost:4567/tasks/new");
-//     fill("#description").with("Do the dishes");
-//     submit(".btn");
-//     click("a", withText("View tasks"));
-//     click("a", withText("Do the dishes"));
-//     assertThat(pageSource()).contains("Do the dishes");
-//    }
-//   @Test
-//   public void taskNotFoundMessageShown() {
-//     goTo("http://localhost:4567/tasks/999");
-//     assertThat(pageSource()).contains("Task not found");
-//   }
-// }
