@@ -64,7 +64,7 @@ public class AppTest extends FluentTest {
     submit(".btn");
     click("a", withText("View Words list."));
     click("a", withText("Cat"));
-    assertThat(pageSource()).contains("Add a word to Cat");
+    assertThat(pageSource()).contains("Add a description to Cat");
   }
 
 }
