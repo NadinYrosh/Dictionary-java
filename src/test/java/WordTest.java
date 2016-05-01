@@ -13,11 +13,11 @@ public class WordTest {
     assertEquals(true, myWord instanceof Word);
   }
 
-  @Test
-  public void getDescription_categoryInstatiatesWithDescription_Home() {
-    Word testWord = new Word("Home");
-    assertEquals("Home", testWord.getDescription());
-  }
+  // @Test
+  // public void getDefinition_categoryInstatiatesWithDefinition_Home() {
+  //   Word testWord = new Word("Home");
+  //   assertEquals("Home", testWord.getDefinition());
+  // }
 
 
   @Test
@@ -56,9 +56,9 @@ public class WordTest {
 
 
   @Test
-  public void getDefinition_initiallyReturnsEmptyList_ArrayList() {
+  public void getDefinitions_initiallyReturnsEmptyList_ArrayList() {
     Word testWord = new Word("Earth");
-    assertEquals(0, testWord.getDefinition().size());
+    assertEquals(0, testWord.getDefinitions().size());
   }
 
   @Test
@@ -66,6 +66,6 @@ public class WordTest {
     Word testWord = new Word("Earth");
     Definition testDefinition = new Definition("Home is");
     testWord.addDefinition(testDefinition);
-    assertTrue(testWord.getDefinition().contains(testDefinition));
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
   }
 }

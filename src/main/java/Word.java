@@ -1,25 +1,25 @@
 import java.util.ArrayList;
 
 public class Word {
-  private String mDescription;
-  private boolean mCompleted;
+  private String mWord;
   private static ArrayList<Word> mInstances = new ArrayList<Word>();
   private int mId;
-  private ArrayList<Word> mWord;
-  private ArrayList<Definition> mDescriptions;
+  // private ArrayList<Word> mWord;
+  private ArrayList<Definition> mDefinitions;
+  private boolean mCompleted;
 
 
-  public Word(String description) {
-    mDescription = description;
-    mCompleted = false;
+  public Word(String word) {
+    mWord = word;
     mInstances.add(this);
     mId = mInstances.size();
-    mWord = new ArrayList<Word>();
-    mDescriptions = new ArrayList<Definition>();
+    mDefinitions = new ArrayList<Definition>();
+    mCompleted = false;
+    // mWord = new ArrayList<Word>();
   }
 
-  public String getDescription() {
-    return mDescription;
+  public String getWord() {
+    return mWord;
   }
 
   public boolean isCompleted() {
@@ -46,11 +46,11 @@ public class Word {
     }
   }
 
-  public ArrayList<Definition> getDefinition() {
-    return mDescriptions;
+  public ArrayList<Definition> getDefinitions(){
+    return mDefinitions;
   }
 
-  public void addDefinition(Definition description) {
-    mDescriptions.add(description);
+  public void addDefinition(Definition definition) {
+    mDefinitions.add(definition);
   }
 }

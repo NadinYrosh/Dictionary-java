@@ -43,7 +43,7 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/words/new");
     fill("#name").with("House");
     submit(".btn");
-    // click("a", withText("View Words list."));
+    click("a", withText("View Words list."));
     assertThat(pageSource()).contains("House");
   }
 
@@ -62,14 +62,14 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("sun");
   }
 
-  // @Test
-  // public void wordDefinitionPageDisplaysDescription() {
-  //   goTo("http://localhost:4567/words/new");
-  //   fill("#name").with("Cat");
-  //   submit(".btn");
-  //   click("a", withText("View Words list."));
-  //   click("a", withText("Add a definition"));
-  //   assertThat(pageSource()).contains("Add a description to Cat");
-  // }
+  @Test
+  public void wordDefinitionPageDisplaysDescription() {
+    goTo("http://localhost:4567/words/new");
+    fill("#name").with("Cat");
+    submit(".btn");
+    click("a", withText("View Words list."));
+    click("a", withText("Add a definition"));
+    assertThat(pageSource()).contains("Add a description to Cat");
+  }
 
 }

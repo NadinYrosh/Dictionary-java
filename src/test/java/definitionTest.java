@@ -16,9 +16,9 @@ public class DefinitionTest {
   }
 
   @Test
-  public void getDescription_descriptionInstantiatesWithDefinition_Home() {
+  public void getDefinition_definitionInstantiatesWithDefinition_Home() {
     Definition testDefinition = new Definition("Home is");
-    assertEquals("Home is", testDefinition.getDescription());
+    assertEquals("Home is", testDefinition.getDefinition());
   }
 
   @Test
@@ -29,7 +29,7 @@ public class DefinitionTest {
 
 
   @Test
-  public void all_returnsAllInstancesOfDescription_true() {
+  public void all_returnsAllInstancesOfDefinition_true() {
     Definition firstDefinition = new Definition("Home is");
     Definition secondDefinition = new Definition("Work is");
     assertTrue(Definition.all().contains(firstDefinition));

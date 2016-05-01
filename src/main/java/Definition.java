@@ -1,22 +1,22 @@
 import java.util.ArrayList;
 
 public class Definition {
-  private String mDescription;
-  private boolean mCompleted;
-  private int mId;
-  private ArrayList<Word> mWord;
+  private String mDefinition;
   private static ArrayList<Definition> instances = new ArrayList<Definition>();
+  private int mId;
+  private boolean mCompleted;
+  // private ArrayList<Word> mWord;
 
 
-  public Definition(String description) {
-    mDescription = description;
+  public Definition(String definition) {
+    mDefinition = definition;
     instances.add(this);
     mId = instances.size();
-    mWord = new ArrayList<Word>();
+    // mWord = new ArrayList<Word>();
   }
 
-  public String getDescription() {
-    return mDescription;
+  public String getDefinition() {
+    return mDefinition;
   }
 
   public boolean isCompleted() {
@@ -26,11 +26,11 @@ public class Definition {
   public static ArrayList<Definition> all() {
     return instances;
   }
-
+  //
   public static void clear() {
     instances.clear();
   }
-
+  //
   public int getId() {
     return mId;
   }
