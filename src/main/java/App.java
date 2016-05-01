@@ -63,9 +63,8 @@ public class App {
       Definition newDefinition = new Definition(definition);
 
       word.addDefinition(newDefinition);
-    
+
       model.put("word", word);
-      // model.put("definitions", definitions);
       model.put("template", "templates/word-definition-success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());

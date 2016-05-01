@@ -28,14 +28,13 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Add a New Word");
     assertThat(pageSource()).contains("View Words List");
   }
-
   @Test
   public void wordIsCreatedTest() {
     goTo("http://localhost:4567/");
     click("a", withText("Add a New Word"));
-    fill("#name").with("Boy");
+    fill("#name").with("Home");
     submit(".btn");
-    assertThat(pageSource()).contains("Your Word has been saved.");
+    assertThat(pageSource()).contains("Your word has been saved.");
   }
 
   @Test
@@ -47,29 +46,25 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("House");
   }
 
+
   @Test
-  public void wordShowPageDisplaysDefinition() {
+  public void wordShowPageDisplaysWord() {
     goTo("http://localhost:4567/words/new");
-    fill("#name").with("House");
+    fill("#name").with("School");
     submit(".btn");
     click("a", withText("View Words list."));
-    click("a", withText("House"));
-    click("a", withText("Add a New Word"));
-    fill("#description").with("sun");
-    submit(".btn");
-    click("a", withText("Add a New Word"));
-    click("a", withText("House"));
-    assertThat(pageSource()).contains("sun");
+    click("a", withText("School"));
+    assertThat(pageSource()).contains("School");
   }
 
   @Test
-  public void wordDefinitionPageDisplaysDescription() {
+  public void wordDefinitionsFormIsDisplayed() {
     goTo("http://localhost:4567/words/new");
-    fill("#name").with("Cat");
+    fill("#name").with("Family");
     submit(".btn");
     click("a", withText("View Words list."));
-    click("a", withText("Add a definition"));
-    assertThat(pageSource()).contains("Add a description to Cat");
+    click("a", withText("Family"));
+    click("a", withText("Add definition"));
+    assertThat(pageSource()).contains("Add definition to Family");
   }
-
 }

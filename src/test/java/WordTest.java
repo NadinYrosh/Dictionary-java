@@ -13,11 +13,11 @@ public class WordTest {
     assertEquals(true, myWord instanceof Word);
   }
 
-  // @Test
-  // public void getDefinition_categoryInstatiatesWithDefinition_Home() {
-  //   Word testWord = new Word("Home");
-  //   assertEquals("Home", testWord.getDefinition());
-  // }
+  @Test
+  public void getDefinition_categoryInstatiatesWithDefinition_Home() {
+    Word testWord = new Word("Home");
+    assertEquals("Home", testWord.getDefinition());
+  }
 
 
   @Test
