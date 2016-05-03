@@ -65,6 +65,6 @@ public class AppTest extends FluentTest {
     click("a", withText("View Words list."));
     click("a", withText("cat"));
     click("a", withText("Add definition"));
-    assertThat(pageSource()).contains("Add a Definition to cat");
+    assertThat(pageSource()).contains("Add a definition to cat");
   }
 }
