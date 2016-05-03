@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DefinitionTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-05-01T04:33:04" hostname="Nadins-MacBook-Pro.local" time="0.001">
+<testsuite name="DefinitionTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-05-03T04:40:07" hostname="Nadins-MacBook-Pro.local" time="0.005">
   <properties/>
+  <testcase name="clear_emptiesALlDefinitions_0" classname="DefinitionTest" time="0.0"/>
   <testcase name="definition_instantiatesCorrectly_true" classname="DefinitionTest" time="0.001"/>
   <testcase name="getDefinition_definitionInstantiatesWithDefinition_Home" classname="DefinitionTest" time="0.0"/>
+  <testcase name="getId_definitionInstantiateWithAnId_1" classname="DefinitionTest" time="0.001"/>
+  <testcase name="find_returnsDefinitionWithSameId_secondDefinition" classname="DefinitionTest" time="0.0"/>
+  <testcase name="all_returnsAllInstancesOfDefinition_true" classname="DefinitionTest" time="0.001"/>
+  <testcase name="find_returnsNullWhenNoDefinitionFound_null" classname="DefinitionTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

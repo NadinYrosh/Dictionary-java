@@ -15,16 +15,13 @@ public class Word {
     mId = mInstances.size();
     mDefinitions = new ArrayList<Definition>();
     mCompleted = false;
-    // mWord = new ArrayList<Word>();
+    ;
   }
 
   public String getWord() {
     return mWord;
   }
 
-  public boolean isCompleted() {
-    return mCompleted;
-  }
 
   public static ArrayList<Word> all() {
     return mInstances;

@@ -60,11 +60,11 @@ public class AppTest extends FluentTest {
   @Test
   public void wordDefinitionsFormIsDisplayed() {
     goTo("http://localhost:4567/words/new");
-    fill("#name").with("Family");
+    fill("#name").with("cat");
     submit(".btn");
     click("a", withText("View Words list."));
-    click("a", withText("Family"));
+    click("a", withText("cat"));
     click("a", withText("Add definition"));
-    assertThat(pageSource()).contains("Add definition to Family");
+    assertThat(pageSource()).contains("Add a Definition to cat");
   }
 }

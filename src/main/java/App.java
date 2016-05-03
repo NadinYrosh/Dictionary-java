@@ -59,8 +59,8 @@ public class App {
 
       Word word = Word.find(Integer.parseInt(request.queryParams("wordId")));
 
-      String definition = request.queryParams("definition");
-      Definition newDefinition = new Definition(definition);
+      String description = request.queryParams("description");
+      Definition newDefinition = new Definition(description);
 
       word.addDefinition(newDefinition);
 

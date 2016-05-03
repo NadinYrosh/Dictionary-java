@@ -22,13 +22,6 @@ public class DefinitionTest {
   }
 
   @Test
-  public void isCompleted_isFalseAfterInstantiation_false() {
-    Definition testDefinition = new Definition("Home is");
-    assertEquals(false, testDefinition.isCompleted());
-  }
-
-
-  @Test
   public void all_returnsAllInstancesOfDefinition_true() {
     Definition firstDefinition = new Definition("Home is");
     Definition secondDefinition = new Definition("Work is");
